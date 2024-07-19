@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registrar Venta</title>
+    <link rel="stylesheet" href="csss.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../home/index.html"><button class="salir">Salir</button></a>
+      </nav>
+    </header>
+    <div class="container">
+      <h1>Registrar Venta</h1>
+      <form>
+        <label for="producto">Producto:</label>
+        <select id="producto" name="producto">
+          <option value="">Seleccione un producto</option>
+          <option value="1">Arroz</option>
+          <option value="10">Frijoles</option>
+          <option value="3">Aceite</option>
+          <option value="4">Azucar</option>
+          <option value="5">Sal</option>
+        </select>
+        <br /><br />
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" required />
+        <br /><br />
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" min="0" required />
+        <br /><br />
+        <label for="fecha">Fecha de Venta:</label>
+        <input type="date" id="fecha" name="fecha" required />
+        <br /><br />
+        <button type="submit">Registrar Venta</button>
+      </form>
+    </div>
+  </body>
+</html>

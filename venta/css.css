@@ -1,0 +1,51 @@
+.salir{
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 0;
+    width: 100px;
+    height: 40px;
+    margin: auto;
+}
+nav{
+    background-color: #333;
+    color: #fff;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  th {
+    background-color: #34A853;
+    color: white;
+  }
+  
+  button {
+    background-color:#34A853;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 30px 2px;
+    cursor: pointer;
+  }
+  
+  .delete {
+    background-color: #f44336;
+  }
+body{
+    font-family: Arial, sans-serif;
+}
