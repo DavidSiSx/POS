@@ -73,3 +73,33 @@ nav{
     height: 40px;
     margin: auto;
 }
+.feature2 {
+    background-color: #4e504e;
+    padding: 20px;
+    margin: 20px;
+    width: calc(20% - 40px);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature2 i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.feature2 a{
+    text-decoration: none;
+
+}
+.feature2 h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feature2 p {
+    text-align: center;
+    font-size: 14px;
+    color: #fffcfc;
+}
