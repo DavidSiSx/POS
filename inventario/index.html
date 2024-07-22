@@ -14,6 +14,7 @@
 <h2>Productos</h2>
 
     <table>
+      <tbody>
       <tr>
         <th>id_producto</th>
         <th>Nombre</th>
@@ -25,16 +26,18 @@
         <th>Acciones</th>
       </tr>
       <tr>
+        <td>2</td>
+        <td>Frijoles</td>
+        <td>Isadora</td>
+        <td>10</td>
+        <td>$10.00</td>
         <td>1</td>
-        <td>Arroz</td>
-        <td>Del Valle</td>
-        <td>20</td>
-        <td>$40.00</td>
-        <td>1</td>
-        <td>10/05/2021</td>
+        <td>10/05/2024</td>
         <td>
           <button class="modify">Modificar</button>
-          <button class="delete">Eliminar</button>
+          <form action="./delete.php" method="POST" class="">
+            <input type="hidden" name="id_producto" value="1">
+            <button type="submit" class="delete">Eliminar</button>
         </td>
       </tr>
       <tr>
@@ -47,7 +50,9 @@
         <td>10/05/2024</td>
         <td>
           <button class="modify">Modificar</button>
-          <button class="delete">Eliminar</button>
+          <form action="./delete.php" method="POST" class="">
+            <input type="hidden" name="id_producto" value="1">
+            <button type="submit" class="delete">Eliminar</button>
         </td>
       </tr>
       <tr>
@@ -60,7 +65,9 @@
         <td>10/05/2024</td>
         <td>
           <button class="modify">Modificar</button>
-          <button class="delete">Eliminar</button>
+          <form action="./delete.php" method="POST" class="">
+            <input type="hidden" name="id_producto" value="1">
+            <button type="submit" class="delete">Eliminar</button>
         </td>
       </tr>
       <tr>
@@ -73,7 +80,9 @@
         <td>12/05/2024</td>
         <td>
           <button class="modify">Modificar</button>
-          <button class="delete">Eliminar</button>
+          <form action="./delete.php" method="POST" class="">
+            <input type="hidden" name="id_producto" value="1">
+            <button type="submit" class="delete">Eliminar</button>
         </td>
       </tr>
       <tr>
@@ -86,9 +95,12 @@
         <td>13/05/2024</td>
         <td>
           <button class="modify">Modificar</button>
-          <button class="delete">Eliminar</button>
+          <form action="./delete.php" method="POST" class="">
+            <input type="hidden" name="id_producto" value="1">
+            <button type="submit" class="delete">Eliminar</button>
         </td>
       </tr>
+    </tbody>
     </table>
 </div>
 

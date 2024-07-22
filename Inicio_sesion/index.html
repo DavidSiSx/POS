@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CodePen - Wavy login form</title>
+    <title>login</title>
     <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 
@@ -13,16 +13,12 @@
     <div class="titulo">
         <H1>Inicia Sesion</H1>
     </div>
-    <form class="login" action="../home/index.html">
-        
-        <input type="text" required placeholder="Usuario">
-        <input type="password" required placeholder="Contraseña">
-        <input type="submit" class="button button-block" value="Iniciar Sesión">
+    <form class="login" action="./login.php" method="post">
+        <input type="text" name="usuario" required placeholder="Usuario">
+        <input type="password" name="contrasena" required placeholder="Contraseña">
+        <button type="submit" class="button button-block">Iniciar sesion</button>
     </form>
-
-
-    <a href="https://codepen.io/davinci/" target="_blank">check my other pens</a>
-    <!-- partial -->
+    
 
 </body>
 

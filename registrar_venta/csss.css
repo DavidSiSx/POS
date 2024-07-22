@@ -1,66 +1,100 @@
 body {
-    font-family: sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  label {
-    margin-bottom: 10px;
-  }
-  
-  input, select {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%;
-  }
-  
-  button[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #3e8e41;
-  }
-  .salir{
-    background-color: rgb(255, 0, 0);
-    color: rgb(255, 255, 255);
-    padding: 0;
-    width: 100px;
-    height: 40px;
-    margin: auto;
+  font-family: sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+
+.salir{
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 0;
+  width: 100px;
+  height: 40px;
+  margin: auto;
 }
 nav{
-    background-color: #333;
-    color: #fff;
+  background-color: #333;
+  color: #fff;
+}
+.container {
+max-width: 1900px;
+margin: 40px auto; 
+background-color: #fff;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+padding: 30px; 
+border-radius: 10px; 
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+h1 {
+text-align: center;
+margin-bottom: 30px; 
+color: #333;
+font-weight: bold; 
+}
+
+form {
+display: flex;
+flex-wrap: wrap;
+padding: 20px;
+width: 100%; 
+justify-content: center;
+}
+
+label {
+margin-bottom: 10px;
+font-weight: bold; 
+}
+
+input, select {
+align-items: center;
+padding: 10px;
+margin-bottom: 20px;
+border: 1px solid #ccc; 
+border-radius: 5px;
+width: 100%; 
+}
+
+button[type="submit"], .add-product {
+align-items: center;
+display: block; 
+margin-right: 20px; 
+margin-bottom: 20px;
+margin-left:50px ;
+background-color: #4CAF50;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+width: 150px;
+}
+
+button[type="submit"]:hover, .add-product:hover {
+background-color: #3e8e41;
+}
+
+button[type="submit"]:last-child, .add-product:last-child {
+margin-right: 0; /* remove margin from last button */
+}
+
+.add-product {
+background-color: #337ab7;
+width: 150px;
+}
+
+.add-product:hover {
+background-color: #23527c;
+}
+
+#product-lines {
+margin-bottom: 20px; 
+}
+
+.product-line {
+margin-bottom: 20px; 
 }

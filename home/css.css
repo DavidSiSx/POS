@@ -37,7 +37,7 @@ nav{
 
 .features {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     justify-content: center;
 }
 
@@ -45,7 +45,7 @@ nav{
     background-color: #fff;
     padding: 20px;
     margin: 20px;
-    width: calc(20% - 40px);
+    width: 40%;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -72,4 +72,34 @@ nav{
     width: 100px;
     height: 40px;
     margin: auto;
+}
+.Venta {
+    background-color: #63ed7f;
+    padding: 20px;
+    margin: 20px;
+    width: 40%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+}
+
+.Venta i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.Venta h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.Venta p {
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+}
+.venta a{
+    text-decoration: none;
 }
