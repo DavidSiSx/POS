@@ -1,5 +1,4 @@
 body {
-<<<<<<< HEAD
   font-family: sans-serif;
   background-color: #ffffff;
   margin: 0;
@@ -98,7 +97,6 @@ margin-bottom: 20px;
 
 .product-line {
 margin-bottom: 20px; 
-=======
     font-family: sans-serif;
     background-color: #ffffff;
     margin: 0;
@@ -197,5 +195,4 @@ button[type="submit"]:last-child, .add-product:last-child {
 
 .product-line {
   margin-bottom: 20px; 
->>>>>>> ab36f5b9598aa473b54e9dc35142dc52ae12ecbd
 }

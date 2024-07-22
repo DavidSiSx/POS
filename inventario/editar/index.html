@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html"><button class="salir">Salir</button></a>
+        </nav>
+    </header>
+    <h1>Editar Producto</h1>
+    <div class="container">
+        <form action="../index.html" id="editProductForm">
+            <input type="hidden" id="editProductId">
+            <label for="editProductName">Nombre:</label>
+            <input type="text" id="editProductName" name="editProductName"><br><br>
+            <label for="editProductMarca">Marca:</label>
+            <input type="text" id="editProductMarca" name="editProductMarca"><br><br>
+            <label for="editProductStock">Stock:</label>
+            <input type="number" id="editProductStock" name="editProductStock"><br><br>
+            <label for="editProductPrecio">Precio:</label>
+            <input type="number" id="editProductPrecio" name="editProductPrecio"><br><br>
+            <label for="editProductCategoria">ID Categoria:</label>
+            <input type="number" id="editProductCategoria" name="editProductCategoria"><br><br>
+            <label for="editProductFecha">Fecha Ingreso:</label>
+            <input type="date" id="editProductFecha" name="editProductFecha"><br><br>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+</body>
+</html>
