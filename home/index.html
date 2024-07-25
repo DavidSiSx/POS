@@ -30,7 +30,7 @@
             </div>
             <div class="feature">
                 <i class="fas fa-chart-line"></i>
-                <a href="../venta/index..php">
+                <a href="../venta/index.php">
                     <h2>Ventas</h2>
                 </a>
                 <p>Ver y administrar tus ventas</p>
@@ -58,36 +58,77 @@
                 <p>Registrar una nueva venta</p>
             </div>
         </div>
-        <div>
+        <div class="container">
             <canvas id="myChart" width="800" height="400"></canvas>
-          </div>
-          
-          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-          
-          <script>
-            const ctx = document.getElementById('myChart').getContext('2d');
-          
-            new Chart(ctx, {
-              type: 'bar',
-              data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                  label: '# of Votes',
-                  data: [12, 19, 3, 5, 2, 3],
-                  borderWidth: 1
-                }]
-              },
-              options: {
-                scales: {
-                  y: {
-                    beginAtZero: true
-                  }
-                }
-              }
-            });
-          </script>
-          
+        </div>
 
+        <script>
+      
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('./obtener_datos.php')
+            .then(response => response.json())
+            .then(data => {
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: data.labels,
+                        datasets: [
+                            {
+                                label: 'Cantidad',
+                                data: data.cantidad,
+                                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Total',
+                                data: data.total,
+                                backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                                borderColor: 'rgba(255, 159, 64, 1)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'ID Producto',
+                                data: data.id_producto,
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Nombre',
+                                data: data.nombre,
+                                backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                                borderColor: 'rgba(153, 102, 255, 1)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Stock',
+                                data: data.stock,
+                                backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                                borderColor: 'rgba(255, 206, 86, 1)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Precio',
+                                data: data.precio,
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            });
+    });
+        </script>
     </main>
 </body>
 
