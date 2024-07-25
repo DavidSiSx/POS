@@ -1,13 +1,25 @@
 <?php
-include '../connection/conn.php';
+require_once '../connection/conn.php';
 
-print_r($_GET);
+if (isset($_POST['id_marca'])) {
+    $id_marca = $_POST['id_marca'];
 
-$id_producto = $_GET['id_marca'];
+    $sql = "CALL sp_eliminar_marca(?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('i', $id_marca);
 
-$query = "CALL sp_eliminar_marca('$id_marca')";
+    if ($stmt->execute()) {
+        // Marca eliminada correctamente, redirigir a la página de marcas
+        header("Location: index.php");
+        exit();
+    } else {
+        echo "Error al eliminar la marca: " . $stmt->error;
+    }
 
-$delete = $conexion->query($query);
+    $stmt->close();
+} else {
+    echo "No se recibió el ID de la marca.";
+}
 
-header("Location: ../../../marcas/index.html");
+$conn->close();
 ?>

@@ -73,9 +73,8 @@ nav{
     height: 40px;
     margin: auto;
 }
-<<<<<<< HEAD
 .Venta {
-    background-color: #63ed7f;
+    background-color: #38d958;
     padding: 20px;
     margin: 20px;
     width: 40%;
@@ -92,34 +91,10 @@ nav{
 
 .Venta h2 {
     text-align: center;
-=======
-.feature2 {
-    background-color: #4e504e;
-    padding: 20px;
-    margin: 20px;
-    width: calc(20% - 40px);
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.feature2 i {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.feature2 a{
-    text-decoration: none;
-
-}
-.feature2 h2 {
-    text-align: center;
-    color: #fff;
->>>>>>> ab36f5b9598aa473b54e9dc35142dc52ae12ecbd
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
 .Venta p {
     text-align: center;
     font-size: 14px;
@@ -127,10 +102,7 @@ nav{
 }
 .venta a{
     text-decoration: none;
-=======
-.feature2 p {
-    text-align: center;
-    font-size: 14px;
-    color: #fffcfc;
->>>>>>> ab36f5b9598aa473b54e9dc35142dc52ae12ecbd
+}
+canvas{
+    width: 1000px;
 }

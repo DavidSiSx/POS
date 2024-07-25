@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Venta</title>
+    <link rel="stylesheet" type="text/css" href="./csss.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../home/index.html"><button class="salir">Salir</button></a>
+        </nav>
+    </header>
+    <h1>Registrar Ventas</h1>
+    <div class="container">
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="product-lines">
+                <tr class="product-line">
+                    <td>
+                        <select name="producto[]">
+                            <?php
+                            require_once '../connection/conn.php';
+                            $sql = "CALL obtener_productos_con_stock()";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<option value='{$row['id_producto']}'>{$row['nombre']}</option>";
+                                }
+                            }
+                            $conn->close();
+                            ?>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="number" name="cantidad[]" min="1" required>
+                    </td>
+                    <td>
+                        <button type="button" onclick="removeProduct(this)">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="add-product" onclick="addProduct()">Añadir Producto</button>
+        <br /><br />
+        <form id="dataForm" action="./registrar.php" method="post">
+            <input type="hidden" id="productos" name="productos">
+            <input type="hidden" id="cantidades" name="cantidades">
+            <button class="boton" type="submit">Registrar Venta</button>
+        </form>
+    </div>
+
+    <script>
+        function addProduct() {
+            let newRow = document.querySelector('.product-line').cloneNode(true);
+            document.getElementById('product-lines').appendChild(newRow);
+        }
+
+        function removeProduct(button) {
+            button.closest('tr').remove();
+        }
+
+        $("#dataForm").submit(function(event){
+            event.preventDefault();
+            let productos = [];
+            let cantidades = [];
+            
+            document.querySelectorAll('.product-line').forEach(function(row){
+                productos.push(row.querySelector('select[name="producto[]"]').value);
+                cantidades.push(row.querySelector('input[name="cantidad[]"]').value);
+            });
+
+            document.getElementById('productos').value = JSON.stringify(productos);
+            document.getElementById('cantidades').value = JSON.stringify(cantidades);
+            
+            this.submit();
+        });
+    </script>
+</body>
+</html>

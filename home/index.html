@@ -1,13 +1,14 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Sistema de Gestión</title>
     <link rel="stylesheet" href="./css.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <header>
         <nav>
@@ -22,31 +23,72 @@
         <section class="features">
             <div class="feature">
                 <i class="fas fa-boxes"></i>
-                <a href="../inventario/index.html"><h2>Inventario</h2></a>
+                <a href="../inventario/index.php">
+                    <h2>Inventario</h2>
+                </a>
                 <p>Ver y administrar tus productos</p>
             </div>
             <div class="feature">
                 <i class="fas fa-chart-line"></i>
-                <a href="../venta/index.html"><h2>Ventas</h2></a>
+                <a href="../venta/index..php">
+                    <h2>Ventas</h2>
+                </a>
                 <p>Ver y administrar tus ventas</p>
             </div>
             <div class="feature">
                 <i class="fas fa-users"></i>
-                <a href="../admins/index.html"><h2>Empleados</h2></a>
+                <a href="../admins/index.php">
+                    <h2>Empleados</h2>
+                </a>
                 <p>Ver y administrar tus empleados</p>
             </div>
             <div class="feature">
                 <i class="fas fa-tag"></i>
-                <a href="../marcas/index.html"><h2>Marcas</h2></a>
+                <a href="../marcas/index.php">
+                    <h2>Marcas</h2>
+                </a>
                 <p>Ver y administrar tus marcas</p>
             </div>
         </section>
         <div class="Venta">
-        <div class="feature2">
-            <a href="../registrar_venta/index.html"><i class="fas fa-cash-register"></i>
-            <h2>Registrar Venta</h2></a>
-            <p>Registrar una nueva venta</p>
+            <div class="feature2">
+                <a href="../registrar_venta/index.php"><i class="fas fa-cash-register"></i>
+                    <h2>Registrar Venta</h2>
+                </a>
+                <p>Registrar una nueva venta</p>
+            </div>
         </div>
+        <div>
+            <canvas id="myChart" width="800" height="400"></canvas>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          
+          <script>
+            const ctx = document.getElementById('myChart').getContext('2d');
+          
+            new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                  label: '# of Votes',
+                  data: [12, 19, 3, 5, 2, 3],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+          
+
     </main>
 </body>
+
 </html>

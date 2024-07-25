@@ -19,7 +19,7 @@ if (isset($_POST['usuario']) && isset($_POST['contrasena']))
     if (!$result) {
         die("Error en la consulta SQL: " . $conn->error);
     }
-
+ 
     if ($result->num_rows > 0) {
         echo "Usuario encontrado<br>";
         $row = $result->fetch_assoc();
@@ -32,10 +32,12 @@ if (isset($_POST['usuario']) && isset($_POST['contrasena']))
             $_SESSION['ap_materno'] = $row['ap_materno'];
             header("Location: ../home/index.html");
             exit();
+          
         } else {
             if ($row['estado'] == 'Activo') {
             $_SESSION['error'] = "El usuario ya inició sesión";
             header("Location: ../home/index.html");
+            
             exit();
             }
     //} else {
